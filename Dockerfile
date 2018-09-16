@@ -66,7 +66,7 @@ USER ${USER}
 
 COPY . .
 
-RUN buildozer android debug || /bin/true
+RUN buildozer android debug || cp /home/user/hostcwd/.buildozer/android/platform/build/dists/tic_tac_toe/bin/TicTacToe-1.0-debug.apk .
 
 CMD tail -f /var/log/faillog
 
